@@ -54,7 +54,7 @@ namespace Module05Exercise01.Services
                 using (var conn = new MySqlConnection(_connectionString))
                 {
                     await conn.OpenAsync();
-                    var cmd = new MySqlCommand("INSERT INTO tblPersonal (Name, Address, email, ContactNo) VALUES (@Name, @Address, @email, @ContactNo)", conn);
+                    var cmd = new MySqlCommand("INSERT INTO tblemployee (Name, Address, email, ContactNo) VALUES (@Name, @Address, @email, @ContactNo)", conn);
                     cmd.Parameters.AddWithValue("@Name", newEmployee.Name);
                     cmd.Parameters.AddWithValue("@Address", newEmployee.Address);
                     cmd.Parameters.AddWithValue("@email", newEmployee.email);
@@ -78,7 +78,7 @@ namespace Module05Exercise01.Services
                 using (var conn = new MySqlConnection(_connectionString))
                 {
                     await conn.OpenAsync();
-                    var cmd = new MySqlCommand("DELETE FROM tblPersonal WHERE EmployeeID = @EmployeeID", conn);
+                    var cmd = new MySqlCommand("DELETE FROM tblemployee WHERE EmployeeID = @EmployeeID", conn);
                     cmd.Parameters.AddWithValue("@EmployeeID", id);
 
                     var result = await cmd.ExecuteNonQueryAsync();
