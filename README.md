@@ -2,8 +2,8 @@
 
 ## Main Page Screenshot
 <p align="center">
-    <img src="Screenshots/MainPage_1.png" width="220"/>
     <img src="Screenshots/MainPage_2.png" width="220"/>
+    <img src="Screenshots/MainPage_1.png" width="220"/>
 </p>
 
 ## ViewEmployee Page Screenshot
