@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Module05Exercise01.View.ViewEmployee"
+             xmlns:local="clr-namespace:Module05Exercise01.ViewModel"
              Shell.NavBarIsVisible="False"
              Background="MintCream">
 
@@ -23,7 +24,7 @@
                             <StackLayout>
                                 <Label Text="{Binding Name}"/>
                                 <Label Text="{Binding Address}"/>
-                                <Label Text="{Binding Email}"/>
+                                <Label Text="{Binding email}"/>
                                 <Label Text="{Binding ContactNo}"/>
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer 
@@ -40,31 +41,33 @@
                     Command="{Binding LoadDataCommand}"
                     BackgroundColor="#1d89e4"/>
 
-            <Label 
-              Text="Add New Employee"
-              FontSize="20" 
-              HorizontalOptions="Center" 
-              Margin="0,0,0,25"/>
+            <Label x:Name="ConnectionStatusLabel"
+                   Text="{Binding StatusMessage}"
+                   FontSize="13"
+                   HorizontalOptions="Center"/>
 
-            <Entry Placeholder="Name" Text="{Binding NewEmployeelName}" Margin="0,0,0,15"/>
+            <Label 
+                Text="Add New Employee"
+                FontSize="20" 
+                HorizontalOptions="Center" 
+                Margin="0,0,0,25"/>
+
+            <Entry Placeholder="Name" Text="{Binding NewEmployeeName}" Margin="0,0,0,15"/>
             <Entry Placeholder="Address" Text="{Binding NewEmployeeAddress}" Margin="0,0,0,15"/>
             <Entry Placeholder="Email" Text="{Binding NewEmployeeEmail}" Margin="0,0,0,15"/>
             <Entry Placeholder="Contact Number" Text="{Binding NewEmployeeContactNo}" Margin="0,0,0,15"/>
 
             <Button 
-             Text="Add Person" 
-             Command="{Binding AddEmployeeCommand}"
-             Margin="0,10,0,25"/>
+                Text="Add Employee" 
+                Command="{Binding AddEmployeeCommand}"
+                Margin="0,10,0,25"
+                BackgroundColor="#1d89e4"/>
 
             <Button 
-             Text="Delete Person" 
-             Command="{Binding DeleteEmployeeCommand}" IsEnabled="{Binding IsEmployeeSelected}" 
-             Margin="0,10,0,25"/>
-
-            <Label x:Name="ConnectionStatusLabel"
-                   Text="{Binding StatusMessage}"
-                   FontSize="13"
-                   HorizontalOptions="Center"/>
+                Text="Delete Employee" 
+                Command="{Binding DeleteEmployeeCommand}" IsEnabled="{Binding IsEmployeeSelected}" 
+                Margin="0,10,0,25"
+                BackgroundColor="DarkRed"/>
 
         </VerticalStackLayout>
     </ScrollView>
