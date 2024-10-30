@@ -15,7 +15,7 @@
 ## Add New Employee Test
 ### Add New Employee Screenshot
 <p align="center">
-    <img src="Screenshots/Add_New_Employee" width="220"/>
+    <img src="Screenshots/Add_New_Employee.png" width="220"/>
 </p>
 
 ### Contact List After Addition Screenshot
