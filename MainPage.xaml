@@ -2,41 +2,37 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Module05Exercise01.MainPage"
-             Shell.NavBarIsVisible="False"
-             Background="MintCream">
-
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,200"
+             Shell.NavBarIsVisible="False">
+    
+    <VerticalStackLayout
+            Padding="30,100"
             Spacing="25">
-            <Image
-                Source="https://cdn-icons-png.flaticon.com/128/9386/9386825.png"
-                HeightRequest="150"
-                Aspect="AspectFit"/>
+
+            <Image Source="https://cdn-icons-png.flaticon.com/128/4081/4081143.png" 
+               HeightRequest="100" 
+               WidthRequest="100"
+               HorizontalOptions="StartAndExpand"/>
+
+            <Label Text="Welcome"
+                   FontSize="30"
+                   FontFamily="ManropeSemibold"/>
             
-            <Label
-                Text="Contact Management App"
-                FontSize="Medium"
-                FontFamily="ManropeSemibold"
-                Margin="0,-10,0,10"
-                HorizontalTextAlignment="Center"/>
+            <Label Text="Log in to your account to continue"
+                   Margin="0,-10"/>
 
-            <Button
-                Text="Add Contact"
-                BackgroundColor="#1d89e4"
-                WidthRequest="250"/>
+            <Entry Placeholder="Email or username"
+                   Margin="0,10"/>
 
-            <Button
-                Text="View Contacts" 
-                Clicked="OpenViewPersonal"
-                BackgroundColor="#1d89e4"
-                WidthRequest="250"/>
+            <Entry Placeholder="Password" 
+                   IsPassword="True"
+                   Margin="0,-10"/>
 
-
-            <Button
-                Text="Manage Contacts"
-                BackgroundColor="#1d89e4"
-                WidthRequest="250"/>
+            <Button Text="Login" 
+                    Padding="18"
+                    Margin="0,10"
+                    Clicked="OpenViewPersonal"
+                    BackgroundColor="Black"
+                    VerticalOptions="CenterAndExpand"/>
 
             <!--
             <Label x:Name="ConnectionStatusLabel"
@@ -49,6 +45,5 @@
                     HorizontalOptions="Fill"/>
             -->
         </VerticalStackLayout>
-    </ScrollView>
 
 </ContentPage>
